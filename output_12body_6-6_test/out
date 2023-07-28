@@ -1,0 +1,283 @@
+/bin/rm -rf Build F90sources bhac
+make[1]: Entering directory `/scratch/mortizto/bhac_runs/FMtorus_4_2/Build'
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/mod_physicaldata.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_physicaldata.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/mod_indices.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_indices.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/rmhd/amrvacpar.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrvacpar.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/bhac_runs/FMtorus_4_2/amrvacusrpar.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrvacusrpar.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/mod_fix_conserve.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_fix_conserve.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/mod_connectivity.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_connectivity.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/mod_gc_comm.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_gc_comm.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amrvacdef.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrvacdef.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/bhac_runs/FMtorus_4_2/amrvacsettings.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrvacsettings.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_indices.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_physicaldata.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/initialize_vars.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/initialize_vars.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/mod_forest.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_forest.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_forest.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_connectivity.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/modules/mod_timing.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_timing.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_timing.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/geometry/mod_metric.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_metric.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/geometry/mod_metric_aux.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_metric_aux.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_metric_aux.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/geometry/mod_transform.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_transform.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/geometry/mod_bl.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_bl.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_bl.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_transform.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/modules/mod_rtsafe2D.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_rtsafe2D.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_rtsafe2D.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/modules/mod_lu.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_lu.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_lu.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_metric.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/initialize_vars.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amrvac.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrvac.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/mod_multigrid_coupling.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_multigrid_coupling.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/m_octree_mg_2d.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/m_octree_mg_2d.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/m_octree_mg_2d.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_multigrid_coupling.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/particles/mod_particles.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_particles.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/particles/mod_particles_user.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_particles_user.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/particles/mod_particles_base.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_particles_base.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amrvacio/slice.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/slice.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/slice.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_particles_base.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/modules/mod_constants.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_constants.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_constants.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/modules/mod_random.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_random.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_random.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_particles_user.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/particles/mod_particles_advect.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_particles_advect.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/modules/mod_odeint.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_odeint.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_odeint.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_particles_advect.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_particles.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrvac.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/advance.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/advance.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/advance.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/setdt.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/setdt.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/setdt.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amrini.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrini.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrini.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/mod_limiter.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_limiter.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_limiter.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amr_solution_node.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amr_solution_node.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amr_solution_node.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/errest.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/errest.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/errest.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amrgrid.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrgrid.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/rmhd/mod_amr_fct.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_amr_fct.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_fix_conserve.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_amr_fct.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrgrid.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amr_fix_conserve.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amr_fix_conserve.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amr_fix_conserve.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amr_ghostcells.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amr_ghostcells.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_gc_comm.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amr_ghostcells.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/rmhd/amrvacphys.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrvacphys.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/rmhd/mod_physaux.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_physaux.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_physaux.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/rmhd/con2prim.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/con2prim.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/con2prim.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrvacphys.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/bhac_runs/FMtorus_4_2/amrvacusr.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrvacusr.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/modules/mod_oneblock.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_oneblock.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_oneblock.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrvacusr.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/tvdlf.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/tvdlf.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/tvdlf.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/load_balance.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/load_balance.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/load_balance.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/connectivity.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/connectivity.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/connectivity.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/boundary_conditions.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/boundary_conditions.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/boundary_conditions.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/comm_lib.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/comm_lib.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/comm_lib.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/forest.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/forest.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/forest.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amr_neighbors.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amr_neighbors.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amr_neighbors.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amr_coarsen_refine.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amr_coarsen_refine.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amr_coarsen_refine.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/refine.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/refine.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/refine.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/coarsen.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/coarsen.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/coarsen.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/set_B0.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/set_B0.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/set_B0.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amr_gc_comm.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amr_gc_comm.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amr_gc_comm.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/selectgrids.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/selectgrids.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/selectgrids.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/mod_watchdog.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_watchdog.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_watchdog.f90
+icc -O3   -c -o watchdog.o /scratch/mortizto/codes/bhac/src/watchdog.c
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/geometry/geometry.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/geometry.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/geometry.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amrvacio/amrio.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrio.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amrvacio/kracken.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/kracken.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/kracken.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amrvacio/collapse.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/collapse.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/collapse.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amrvacio/mod_shell.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_shell.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/modules/mod_interpolate.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_interpolate.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_interpolate.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/amrvacio/convert.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/convert.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/convert.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_shell.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/amrio.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/bhac_runs/FMtorus_4_2/analysis.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/analysis.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/analysis.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/rmhd/eos.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/eos.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/eos.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/rmhd/correctaux.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/correctaux.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/correctaux.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/rmhd/divb.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/divb.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/divb.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/rmhd/con2primIso.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/con2primIso.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/con2primIso.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/rmhd/fct.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/fct.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/fct.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/rmhd/postrad.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/postrad.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/postrad.f90
+/scratch/mortizto/codes/bhac/src/vacpp.pl  -d=23 -phi=3 -z=2 -p=rmhd -nf=1 -eos=gamma -coord=mks /scratch/mortizto/codes/bhac/src/modules/mod_ngmres.t  > /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_ngmres.f90
+mpif90 -c -O3 -fimplicit-none -I. /scratch/mortizto/bhac_runs/FMtorus_4_2/F90sources/mod_ngmres.f90
+make[1]: Leaving directory `/scratch/mortizto/bhac_runs/FMtorus_4_2/Build'
+make -C Build -f /scratch/mortizto/bhac_runs/FMtorus_4_2/makefile WORK_DIR=/scratch/mortizto/bhac_runs/FMtorus_4_2 \
+RECURSED=1 bhac
+make[1]: Entering directory `/scratch/mortizto/bhac_runs/FMtorus_4_2/Build'
+mpif90 -O3 -fimplicit-none -pthread mod_physicaldata.o	mod_indices.o		initialize_vars.o amrvac.o		advance.o		setdt.o amrini.o                mod_limiter.o amr_solution_node.o errest.o		amrgrid.o		amr_fix_conserve.o amr_ghostcells.o	amrvacphys.o amrvacusr.o tvdlf.o load_balance.o		connectivity.o		mod_fix_conserve.o mod_connectivity.o      boundary_conditions.o	comm_lib.o forest.o		mod_forest.o		amr_neighbors.o amr_coarsen_refine.o	refine.o                mod_gc_comm.o coarsen.o		set_B0.o                amr_gc_comm.o selectgrids.o       mod_watchdog.o          watchdog.o  mod_multigrid_coupling.o m_octree_mg_2d.o mod_transform.o geometry.o mod_metric.o mod_bl.o mod_metric_aux.o amrio.o convert.o kracken.o  analysis.o collapse.o slice.o mod_shell.o eos.o correctaux.o con2prim.o divb.o con2primIso.o fct.o mod_physaux.o mod_amr_fct.o postrad.o mod_constants.o    mod_timing.o mod_odeint.o  mod_oneblock.o mod_lu.o mod_rtsafe2D.o mod_interpolate.o mod_ngmres.o mod_random.o mod_particles_advect.o mod_particles_user.o mod_particles_base.o mod_particles.o -lgfortran -o /scratch/mortizto/bhac_runs/FMtorus_4_2/bhac
+make[1]: Leaving directory `/scratch/mortizto/bhac_runs/FMtorus_4_2/Build'
+ -----------------------------------------------------------------------------
+ -----------------------------------------------------------------------------
+                          ____  _    _          _____                         
+                         |  _ \| |  | |   /\   / ____|                        
+                         | |_) | |__| |  /  \ | |                             
+                         |  _ <|  __  | / /\ \| |                             
+                         | |_) | |  | |/ ____ \ |____                         
+                         |____/|_|  |_/_/    \_\_____|                        
+                         -----------------------------                        
+                         The Black Hole Accretion Code                        
+ -----------------------------------------------------------------------------
+ -----------------------------------------------------------------------------
+ DITSAVE for file 1 =        10
+ DTSAVE  for file 2 =  10.000    
+ Warning in ReadParameters: No save condition for file            3
+ Warning in ReadParameters: No save condition for file            4
+ DTSAVE  for file 5 = 0.10000    
+ Warning in ReadParameters: No save condition for file            6
+ TMAX=   10000.0000000000     
+ DTMIN=  1.000000000000000E-006
+ typelimited to predictor for RK
+ Using          128  cells in dimension            1
+ level one dx(           1 )=  5.961558937029355E-002
+ Using           96  cells in dimension            2
+ level one dx(           2 )=  3.272492347489368E-002
+ Error estimation is Lohner's scheme
+ Reading from inifile: amrvac.par
+ snapshotini         :           -1
+ slicenext           :            0
+ collapsenext        :            0
+ shellnext           :            0
+ Filenameini         : output_12body_6-6_test/data
+ Converting?         :  F
+                                                                 
+ -----------------------------------------------------------------------------
+ -----------------------------------------------------------------------------
+ Initialised Meta-info on metric:
+ -----------------------------------------
+ Using mks coordinates
+ Space is non-diagonal
+ Sqrt(gamma) is analytic: T
+ -----------------------------------------
+ These metric elements are zero:
+ F F T F
+ F F T F
+ T T F T
+ F F T F
+ Number of non-zero elements:          10
+ -----------------------------------------
+ These shift-components are zero:
+ F T T
+ Number of non-zero elements:           1
+ -----------------------------------------
+ These components of the metric derivative DgijDk are zero:
+ -----------
+ k=           1
+ F T F
+ T F T
+ F T F
+ -----------
+ k=           2
+ F T F
+ T F T
+ F T F
+ -----------
+ k=           3
+ T T T
+ T T T
+ T T T
+ -----------
+ Number of non-zero elements:          10
+ -----------------------------------------
+ These elements of shift derivatives dbetaidj are zero:
+ F F T
+ T T T
+ T T T
+ Number of non-zero elements:           2
+ -----------------------------------------
+ These elements of the lapse derivative dalphadj are zero:
+ F F T
+ Number of non-zero elements:           2
+ -----------------------------------------------------------------------------
+ Resolution at peak-density:  0.186149618145412       9.817477042468105E-002
+  0.000000000000000E+000
+ pbetamin in torus =  2.999999999999999E-003
+ rhomax in torus =  0.999989635097883     
+ pmax in torus =  5.676740747553310E-003  5.785902094487305E-003
+ -----------------------------------------------------------------------------
+ Startup phase took :             5.605 sec
+ -----------------------------------------------------------------------------
+ BCs before Advance took :        0.006 sec
+ -----------------------------------------------------------------------------
+ Saving visual data. Coordinate directions and variable names are:
+           1 r         
+           2 Theta     
+           3 rho       rho       
+           4 u1        u1        
+           5 u2        u2        
+           6 u3        u3        
+           7 p         p         
+           8 b1        b1        
+           9 b2        b2        
+          10 b3        b3        
+          11 s         s         
+          12 tr1       tr1       
+          13 lfac      lfac      
+          14 xi        xi        
+          15 B2        B2        
+          16 divB      divB      
+          17 gav       gav       
+          18 rhoav     rhoav     
+          19 pav       pav       
+          20 bav       bav       
+          21 betainvav betainvav 
+          22 uphiav    uphiav    
+          23 ptotav    ptotav    
+          24 mdot_int  mdot_int  
+          25 phi_int   phi_int   
+ time =  0.000000000000000E+000
+ -----------------------------------------------------------------------------
+ Total timeloop took        :   583071.176 sec
+ Time spent on Regrid+Update:   293783.364 sec
+                  Percentage:        50.39 %
+ Time spent on IO in loop   :    28858.024 sec
+                  Percentage:         4.95 %
+ Time spent on BC           :    92827.706 sec
+                  Percentage:        15.92 %
+ Total time spent on IO     :    28858.615 sec
+ Total timeintegration took :   583071.772 sec
+ -----------------------------------------------------------------------------
+ Finished BHAC in :        583077.377 sec
+ -----------------------------------------------------------------------------

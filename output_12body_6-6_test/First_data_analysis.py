@@ -17,4 +17,4 @@ for i in col_zeros:
 # =================== Ploting ===================
 
 #Data_ploting.making_plot(data['mdot'])
-Data_ploting.making_plot(data.iloc[:,0:2])
+Data_ploting.making_plot(data.iloc[:,0:2], data['mdot'], data['phi'])
